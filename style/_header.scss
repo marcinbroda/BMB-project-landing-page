@@ -1,0 +1,156 @@
+header{
+	.navBar__container{
+		position: relative;
+
+			.logo__container{
+				padding: 20px 40px;
+				margin: 10px 50px;
+				position: absolute;
+				.logo__link{
+					text-transform: uppercase;
+					text-decoration: none;
+					font-size: 34px;
+					color:#000;
+					z-index: 99;
+					position: relative;
+
+				}
+
+				.logo__circle{
+					z-index: -1;
+					position: absolute;
+					display: inline-block;
+					width: 45px;
+					height: 45px;
+					border-radius: 50%;
+					background-color: #3eff3e;
+					right: -33px;
+					top: 0px;
+				}
+			}
+
+	.header__nav{
+			width: 100%;
+			position: absolute;
+			background-color: #fff;
+			right: 0;
+			z-index: 10;
+			top:100px;
+			transition: .5s;
+			overflow-y: hidden;
+			height: 0px;
+			
+			
+
+		.nav__list--links{
+			display: block;
+			padding: 10px 0 10px 20px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #000;
+			font-size: 18px;
+			text-align: center;
+			transition: 0.3s;
+			}
+		}
+
+		.button__container{
+			position: fixed;
+			top: 30px;
+			right: 20px;
+			z-index: 11;
+			@include tablet{
+				display: none;
+			}
+					
+			.button{
+				position: relative;
+				width: 40px;
+				height: 35px;
+				border-top: 5px solid #000;
+				transition: 0.2s transform linear;
+				background-color: transparent;
+				border-right: 0px;
+				border-left: 0px;
+				outline: none;
+				border-bottom: 0px;	
+				cursor: pointer;	
+			}
+			.button:before, .button:after{
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				border-top: 5px solid #000;
+				transform: translateY(10px);
+				outline: none;
+			}
+
+			.button::after{
+				transform: translateY(25px);
+				transition: 0.2s transform linear;
+
+				
+			}
+
+			 .button-active{
+				transform: rotate(45deg) translateY(5px);
+				border: none;
+				outline: none;
+			}
+			 
+			.button.button-after:after{
+				transform: rotate(-90deg) translateX(-10px);
+				border-top: 5px solid #000;
+
+			}
+
+			.button.button-before:before{
+				border-top: 5px solid #000;
+
+			}
+
+		}
+
+
+		.container__nav--active{
+				background-color: #e74c3c;
+				padding: 7px;
+				border-radius: 4px;
+				top:23px;
+				right: 13px;
+			}
+			.header__nav--active{
+				right: 0;
+			}
+
+			.nav__cover{
+				width: 20%;
+				position: absolute;
+				left: 0;
+				height: 100vh;
+				background-color: #000;
+				z-index: 10;
+				visibility: hidden;
+				opacity: 0;
+				
+			}
+
+			.nav__active{
+					position: fixed;
+					height: 100%;	
+
+			}
+
+
+			.nav__menu--active{
+				color:#ff3d00 !important; 
+				background-color:rgba(97, 121, 121, 0.11);
+
+			@include desktop{
+				background-color:transparent;
+			}
+		}		
+	}
+}

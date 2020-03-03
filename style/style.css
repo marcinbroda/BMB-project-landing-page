@@ -1,0 +1,206 @@
+body {
+  background-color: #fff;
+  overflow-x: hidden;
+  position: relative;
+  scroll-behavior: smooth;
+  /* @include desktop{
+  	width: 1024px;
+  	margin: 0 auto;
+  } */
+}
+
+html {
+  font-size: 16px;
+  font-family: "Lato", sans-serif;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*resize*/
+@keyframes anchor {
+  0% {
+    transform: translateY(-50px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+header .navBar__container {
+  position: relative;
+}
+header .navBar__container .logo__container {
+  padding: 20px 40px;
+  margin: 10px 50px;
+  position: absolute;
+}
+header .navBar__container .logo__container .logo__link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 34px;
+  color: #000;
+  z-index: 99;
+  position: relative;
+}
+header .navBar__container .logo__container .logo__circle {
+  z-index: -1;
+  position: absolute;
+  display: inline-block;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: #3eff3e;
+  right: -33px;
+  top: 0px;
+}
+header .navBar__container .header__nav {
+  width: 100%;
+  position: absolute;
+  background-color: #fff;
+  right: 0;
+  z-index: 10;
+  top: 100px;
+  transition: 0.5s;
+  overflow-y: hidden;
+  height: 0px;
+}
+header .navBar__container .header__nav .nav__list--links {
+  display: block;
+  padding: 10px 0 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #000;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.3s;
+}
+header .navBar__container .button__container {
+  position: fixed;
+  top: 30px;
+  right: 20px;
+  z-index: 11;
+}
+@media (min-width: 768px) {
+  header .navBar__container .button__container {
+    display: none;
+  }
+}
+header .navBar__container .button__container .button {
+  position: relative;
+  width: 40px;
+  height: 35px;
+  border-top: 5px solid #000;
+  transition: 0.2s transform linear;
+  background-color: transparent;
+  border-right: 0px;
+  border-left: 0px;
+  outline: none;
+  border-bottom: 0px;
+  cursor: pointer;
+}
+header .navBar__container .button__container .button:before, header .navBar__container .button__container .button:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  border-top: 5px solid #000;
+  transform: translateY(10px);
+  outline: none;
+}
+header .navBar__container .button__container .button::after {
+  transform: translateY(25px);
+  transition: 0.2s transform linear;
+}
+header .navBar__container .button__container .button-active {
+  transform: rotate(45deg) translateY(5px);
+  border: none;
+  outline: none;
+}
+header .navBar__container .button__container .button.button-after:after {
+  transform: rotate(-90deg) translateX(-10px);
+  border-top: 5px solid #000;
+}
+header .navBar__container .button__container .button.button-before:before {
+  border-top: 5px solid #000;
+}
+header .navBar__container .container__nav--active {
+  background-color: #e74c3c;
+  padding: 7px;
+  border-radius: 4px;
+  top: 23px;
+  right: 13px;
+}
+header .navBar__container .header__nav--active {
+  right: 0;
+}
+header .navBar__container .nav__cover {
+  width: 20%;
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  background-color: #000;
+  z-index: 10;
+  visibility: hidden;
+  opacity: 0;
+}
+header .navBar__container .nav__active {
+  position: fixed;
+  height: 100%;
+}
+header .navBar__container .nav__menu--active {
+  color: #ff3d00 !important;
+  background-color: rgba(97, 121, 121, 0.11);
+}
+@media (min-width: 1024px) {
+  header .navBar__container .nav__menu--active {
+    background-color: transparent;
+  }
+}
+
+/* @import '_nav_mobile.scss'; */
