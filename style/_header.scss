@@ -1,18 +1,20 @@
 header{
+
 	.navBar__container{
 		position: relative;
 
 			.logo__container{
 				padding: 20px 40px;
-				margin: 10px 50px;
-				position: absolute;
+				margin: 10px 0px;
+
 				.logo__link{
 					text-transform: uppercase;
 					text-decoration: none;
 					font-size: 34px;
 					color:#000;
 					z-index: 99;
-					position: relative;
+					position: fixed;
+
 
 				}
 
@@ -31,14 +33,16 @@ header{
 
 	.header__nav{
 			width: 100%;
-			position: absolute;
+			position: fixed;
 			background-color: #fff;
 			right: 0;
 			z-index: 10;
-			top:100px;
+			top:0px;
 			transition: .5s;
 			overflow-y: hidden;
 			height: 0px;
+			padding-top: 80px;
+			padding-bottom: 10px;
 			
 			
 
@@ -114,13 +118,7 @@ header{
 		}
 
 
-		.container__nav--active{
-				background-color: #e74c3c;
-				padding: 7px;
-				border-radius: 4px;
-				top:23px;
-				right: 13px;
-			}
+		
 			.header__nav--active{
 				right: 0;
 			}
@@ -146,11 +144,65 @@ header{
 
 			.nav__menu--active{
 				color:#ff3d00 !important; 
-				background-color:rgba(97, 121, 121, 0.11);
 
 			@include desktop{
 				background-color:transparent;
 			}
 		}		
 	}
+
+	.header__bg{
+		position: relative;
+		margin:0 auto;
+
+
+		  	img{
+		  		height: 600px;
+		  		max-width: 100%;
+		  	
+
+		  	}
+
+
+		  	.header__bg--textbox{
+		  		    position: absolute;
+					z-index: 1;
+					top: 120px;
+					left: 40px;
+					text-align: left;
+					color: #fff;
+
+
+			  	h1{
+			  		font-size: 40px;
+			  		padding-bottom: 40px;
+			  		width: 350px
+
+			  	}
+			  	p{
+			  		font-size: 18px;
+			  		padding-bottom: 30px;
+			  		font-style: italic;
+			  	}
+
+			  	a{
+			  		text-decoration: none;
+			  		color: #fff;
+			  		display: inline-block;
+			  		border: 2px solid #fff;
+			  		padding: 15px 20px ;
+			  		border-radius: 45px;
+			  		text-align: center;
+			  		box-sizing: border-box;
+			  		line-height: 1;
+			  		text-transform: uppercase;
+			  		font-weight: bold;
+
+			  	}
+
+			  }
+
+	}
+
+
 }

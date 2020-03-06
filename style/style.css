@@ -76,8 +76,7 @@ header .navBar__container {
 }
 header .navBar__container .logo__container {
   padding: 20px 40px;
-  margin: 10px 50px;
-  position: absolute;
+  margin: 10px 0px;
 }
 header .navBar__container .logo__container .logo__link {
   text-transform: uppercase;
@@ -85,7 +84,7 @@ header .navBar__container .logo__container .logo__link {
   font-size: 34px;
   color: #000;
   z-index: 99;
-  position: relative;
+  position: fixed;
 }
 header .navBar__container .logo__container .logo__circle {
   z-index: -1;
@@ -100,14 +99,16 @@ header .navBar__container .logo__container .logo__circle {
 }
 header .navBar__container .header__nav {
   width: 100%;
-  position: absolute;
+  position: fixed;
   background-color: #fff;
   right: 0;
   z-index: 10;
-  top: 100px;
+  top: 0px;
   transition: 0.5s;
   overflow-y: hidden;
   height: 0px;
+  padding-top: 80px;
+  padding-bottom: 10px;
 }
 header .navBar__container .header__nav .nav__list--links {
   display: block;
@@ -169,13 +170,6 @@ header .navBar__container .button__container .button.button-after:after {
 header .navBar__container .button__container .button.button-before:before {
   border-top: 5px solid #000;
 }
-header .navBar__container .container__nav--active {
-  background-color: #e74c3c;
-  padding: 7px;
-  border-radius: 4px;
-  top: 23px;
-  right: 13px;
-}
 header .navBar__container .header__nav--active {
   right: 0;
 }
@@ -195,12 +189,97 @@ header .navBar__container .nav__active {
 }
 header .navBar__container .nav__menu--active {
   color: #ff3d00 !important;
-  background-color: rgba(97, 121, 121, 0.11);
 }
 @media (min-width: 1024px) {
   header .navBar__container .nav__menu--active {
     background-color: transparent;
   }
+}
+header .header__bg {
+  position: relative;
+  margin: 0 auto;
+}
+header .header__bg img {
+  height: 600px;
+  max-width: 100%;
+}
+header .header__bg .header__bg--textbox {
+  position: absolute;
+  z-index: 1;
+  top: 120px;
+  left: 40px;
+  text-align: left;
+  color: #fff;
+}
+header .header__bg .header__bg--textbox h1 {
+  font-size: 40px;
+  padding-bottom: 40px;
+  width: 350px;
+}
+header .header__bg .header__bg--textbox p {
+  font-size: 18px;
+  padding-bottom: 30px;
+  font-style: italic;
+}
+header .header__bg .header__bg--textbox a {
+  text-decoration: none;
+  color: #fff;
+  display: inline-block;
+  border: 2px solid #fff;
+  padding: 15px 20px;
+  border-radius: 45px;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.work .work__textbox {
+  margin: 0 auto;
+  padding-top: 60px;
+}
+.work .work__textbox h2 {
+  font-size: 34px;
+  padding: 0px 40px;
+  padding-bottom: 40px;
+}
+.work .work__textbox p {
+  font-size: 16px;
+  padding: 0px 40px;
+  padding-bottom: 40px;
+  font-style: italic;
+  line-height: 1.5;
+  color: #000000a3;
+}
+.work .work__photography {
+  background-color: #fff;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+.work .work__photography .work__photography--img {
+  position: relative;
+  min-height: 100%;
+  height: 400px;
+}
+.work .work__photography .work__photography--img .work__photography--textbox {
+  position: absolute;
+  left: 40px;
+  bottom: 30px;
+  color: #fff;
+}
+.work .work__photography .work__photography--img .work__photography--textbox h3 {
+  text-transform: uppercase;
+  padding-bottom: 10px;
+}
+.work .work__photography .work__photography--img .work__photography--textbox p {
+  text-transform: uppercase;
+  font-style: italic;
+}
+.work .work__photography .work__photography--figure {
+  max-width: 100%;
+  min-height: 100%;
 }
 
 /* @import '_nav_mobile.scss'; */
