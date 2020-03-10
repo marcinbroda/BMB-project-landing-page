@@ -199,10 +199,6 @@ header .header__bg {
   position: relative;
   margin: 0 auto;
 }
-header .header__bg img {
-  height: 600px;
-  max-width: 100%;
-}
 header .header__bg .header__bg--textbox {
   position: absolute;
   z-index: 1;
@@ -210,16 +206,17 @@ header .header__bg .header__bg--textbox {
   left: 40px;
   text-align: left;
   color: #fff;
+  max-width: 450px;
 }
 header .header__bg .header__bg--textbox h1 {
-  font-size: 40px;
+  font-size: 2.7rem;
   padding-bottom: 40px;
-  width: 350px;
 }
 header .header__bg .header__bg--textbox p {
-  font-size: 18px;
+  font-size: 1.5rem;
   padding-bottom: 30px;
   font-style: italic;
+  padding-right: 20px;
 }
 header .header__bg .header__bg--textbox a {
   text-decoration: none;
